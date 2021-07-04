@@ -20,7 +20,7 @@ public class ProductServiceTest {
         double actual = testProductService.calculateTotalCost(bucket);
         assertEquals(expected, actual);
 
-        String bucketWithLowerCaseLetters = "abdCAb";
+        String bucketWithLowerCaseLetters = "dabCAb";
         double expectedWithLowerCaseLetters = 12.75;
         double actualWithLowerCaseLetters = testProductService.calculateTotalCost(bucketWithLowerCaseLetters);
         assertEquals(expectedWithLowerCaseLetters, actualWithLowerCaseLetters);
@@ -35,7 +35,7 @@ public class ProductServiceTest {
 
             @Test
         public void testShouldCalculateTotalCost_withUnknownProducts() {
-            String bucketWithUnknownCodes = "fknnf";
+            String bucketWithUnknownCodes = "mmmnn";
             double expectedWithUnknownCodes = 0;
             double actualWithUnknownCodes = testProductService.calculateTotalCost(bucketWithUnknownCodes);
             assertEquals(expectedWithUnknownCodes, actualWithUnknownCodes);
@@ -45,7 +45,7 @@ public class ProductServiceTest {
             double actualWithSpace = testProductService.calculateTotalCost(bucketWithSpace);
             assertEquals(expectedWithSpace, actualWithSpace);
 
-            String bucketWithNumbers = "ABC58DABA25";
+            String bucketWithNumbers = "ABC58DABA36";
             double expectedWithNumbers = 13.25;
             double actualWithNumbers = testProductService.calculateTotalCost(bucketWithNumbers);
             assertEquals(expectedWithNumbers, actualWithNumbers);
